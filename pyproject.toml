@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "gen_ai_exploration_hub"
+version = "0.1.0"
+description = "Repository for exploring the generation of AI models and their deployment"
+authors = ["juan calvo <juancalvoferrandiz@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+langchain = "^0.1.5"
+langchain-cli = {extras = ["serve"], version = "^0.0.19"}
+langchain-experimental = "^0.0.50"
+langsmith = "^0.0.83"
+langserve = {extras = ["server"], version = "^0.0.39"}
+langchain-google-vertexai = "^0.0.3"
+google-cloud-aiplatform = "^1.39.0"
+tabulate = "^0.9.0"
+grpcio = "^1.54.2"
+grpcio-status = "^1.54.2"
+uvicorn = "^0.23.2"
+fastapi = "^0.103.1"
+pydantic = "^1.10.9"
+sqlalchemy-bigquery = "^1.9.0"
+google-cloud-bigquery-storage = "^2.24.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+httpx = "^0.24.1"
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
